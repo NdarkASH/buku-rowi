@@ -3,15 +3,19 @@ html {
 }
 
 :root {
-  --primary: #3650ff;
-  --primary-dark: #1f2cd3;
-  --accent: #ff8a5c;
-  --dark: #1d2433;
+  /* Mengganti Primary Color dari Biru ke MERAH DARI LOGO */
+  --primary: #CC0000; /* Merah Solid (Dominan di Logo) */
+  --primary-dark: #A30000;
+  
+  /* Mengganti Accent Color dari Orange ke HIJAU DARI LOGO */
+  --accent: #008000; /* Hijau Solid */
+  
+  --dark: #1d2433; /* Tetap gelap untuk teks */
   --muted: #5f6775;
   --muted-light: #8f96a7;
-  --bg-soft: #f5f7ff;
+  --bg-soft: #fcf7f7; /* Latar belakang lembut yang mendekati warna logo */
   --card: #ffffff;
-  --shadow: 0 20px 45px -25px rgba(12, 33, 80, 0.35);
+  --shadow: 0 20px 45px -25px rgba(204, 0, 0, 0.35); /* Shadow mengikuti Primary Color baru */
 }
 
 body {
@@ -25,7 +29,8 @@ body {
 .bg-nav {
   background-color: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(54, 80, 255, 0.08);
+  /* Border navigasi mengikuti Primary Color baru */
+  border-bottom: 1px solid rgba(204, 0, 0, 0.08); 
   transition: background-color 0.3s ease;
 }
 
@@ -48,7 +53,8 @@ body {
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link.active {
-  color: var(--primary) !important;
+  /* Warna aktif mengikuti Primary Color baru */
+  color: var(--primary) !important; 
 }
 
 .badge {
@@ -58,10 +64,12 @@ body {
   text-transform: uppercase;
 }
 
+/* Tombol Primary */
 .btn-primary {
   background: var(--primary);
   border-color: var(--primary);
-  box-shadow: 0 14px 24px -12px rgba(54, 80, 255, 0.75);
+  /* Box shadow mengikuti Primary Color baru */
+  box-shadow: 0 14px 24px -12px rgba(204, 0, 0, 0.75); 
 }
 
 .btn-primary:hover,
@@ -70,16 +78,17 @@ body {
   border-color: var(--primary-dark);
 }
 
+/* Tombol Outline Primary */
 .btn-outline-primary {
   color: var(--primary);
-  border-color: rgba(54, 80, 255, 0.45);
+  border-color: rgba(204, 0, 0, 0.45);
 }
 
 .btn-outline-primary:hover,
 .btn-outline-primary:focus {
-  background: rgba(54, 80, 255, 0.12);
+  background: rgba(204, 0, 0, 0.12);
   color: var(--primary-dark);
-  border-color: rgba(54, 80, 255, 0.6);
+  border-color: rgba(204, 0, 0, 0.6);
 }
 
 .hero {
@@ -96,14 +105,16 @@ body {
   top: -10rem;
   width: 36rem;
   height: 36rem;
-  background: radial-gradient(circle at center, rgba(54, 80, 255, 0.16), transparent 65%);
+  /* Gradien mengikuti Primary Color baru (Merah) */
+  background: radial-gradient(circle at center, rgba(204, 0, 0, 0.16), transparent 65%);
   z-index: -1;
 }
 
 .hero-image {
   max-width: 420px;
   width: 100%;
-  filter: drop-shadow(0 28px 40px rgba(15, 35, 90, 0.25));
+  /* Filter shadow tetap baik untuk kontras */
+  filter: drop-shadow(0 28px 40px rgba(15, 35, 90, 0.25)); 
 }
 
 .section-padding {
@@ -125,7 +136,8 @@ body {
   background: var(--card);
   border-radius: 24px;
   padding: 1.75rem;
-  box-shadow: var(--shadow);
+  /* Box shadow mengikuti Primary Color baru */
+  box-shadow: var(--shadow); 
   display: flex;
   align-items: flex-start;
   gap: 1.1rem;
@@ -133,8 +145,9 @@ body {
 
 .highlight-card i,
 .info-card i {
+  /* Ikon mengikuti Primary Color baru */
   font-size: 1.75rem;
-  color: var(--primary);
+  color: var(--primary); 
 }
 
 .highlight-card h5,
@@ -154,6 +167,7 @@ body {
   gap: 1.5rem;
 }
 
+/* Icon Wrapper mengikuti Primary Color baru */
 .icon-wrap {
   width: 58px;
   height: 58px;
@@ -161,7 +175,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(54, 80, 255, 0.08);
+  background: rgba(204, 0, 0, 0.08); /* Latar belakang soft dari Merah */
   color: var(--primary);
   font-size: 1.6rem;
   margin-bottom: 0.75rem;
@@ -184,8 +198,9 @@ body {
 }
 
 .contact-item i {
+  /* Ikon kontak mengikuti Primary Color baru */
   font-size: 1.5rem;
-  color: var(--primary);
+  color: var(--primary); 
 }
 
 .contact-item .label {
@@ -196,18 +211,21 @@ body {
 
 .contact-form .form-control {
   border-radius: 16px;
-  border: 1px solid rgba(31, 44, 211, 0.12);
+  /* Border form mengikuti Primary Color baru */
+  border: 1px solid rgba(163, 0, 0, 0.12); 
   padding: 0.85rem 1.1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form .form-control:focus {
-  border-color: rgba(54, 80, 255, 0.6);
-  box-shadow: 0 0 0 0.2rem rgba(54, 80, 255, 0.15);
+  /* Fokus form mengikuti Primary Color baru */
+  border-color: rgba(204, 0, 0, 0.6); 
+  box-shadow: 0 0 0 0.2rem rgba(204, 0, 0, 0.15);
 }
 
 .footer {
-  border-top: 1px solid rgba(31, 44, 211, 0.08);
+  /* Border footer mengikuti Primary Color baru */
+  border-top: 1px solid rgba(163, 0, 0, 0.08); 
 }
 
 .footer .link a {
@@ -215,7 +233,8 @@ body {
 }
 
 .footer .link a:hover {
-  color: var(--primary);
+  /* Link hover mengikuti Primary Color baru */
+  color: var(--primary); 
 }
 
 .reveal {
